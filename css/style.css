@@ -372,7 +372,7 @@ footer {
     display: flex;
     background-color: var(--main-bg-color);
     padding: 20px;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 footer a {
@@ -393,7 +393,7 @@ footer ul {
 }
 
 .footer-block {
-    width: 446px;
+    width: 33%;
 }
 
 
@@ -433,9 +433,29 @@ footer ul {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 0px;
+    }
+
+    /*** Activites ***/
+    .activites-cards img {
+        height: 200px;
+    }
+
+    .activites-cards .card {
+        height: 270px;
+    }
+
+    /*** Footer ***/
+    .footer-block {
+        width: 31%;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    /*** Header ***/
+    
 }
