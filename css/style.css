@@ -71,8 +71,6 @@ header {
     justify-content: space-between;
     align-items: center;
     min-width: 100%;
-    height: 79px;
-
 }
 
 .menu-logo {
@@ -95,6 +93,11 @@ header {
 a {
     padding: 36px 0px 25px 0px;
 }
+
+nav a {
+    padding: 34px 0px;
+}
+
 
 .menu-navigation a:hover {
     color: var(--main-color);
@@ -163,11 +166,11 @@ a {
 .formulaire-filtres {
     font-weight: bold;
     display: flex;
-    margin: 25px 0px;
 }
 
 .filtres {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .bouton-filtre {
@@ -223,7 +226,6 @@ a {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 25px;
     padding: 25px;
     box-sizing: border-box;
@@ -231,6 +233,7 @@ a {
 
 /********* Hebergements ***********/
 .hebergements {
+    background-color: var(--main-bg-color);
     width: 65%;
 }
 
@@ -254,6 +257,8 @@ a {
 
 .hebergements-cards .card-title {
     margin-top: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .hebergements-cards img {
@@ -265,6 +270,7 @@ a {
 
 .hebergements-cards .card-subtitle {
     margin: 3px 0px;
+    white-space: nowrap;
 }
 
 .hebergements-cards .card-content {
@@ -277,6 +283,7 @@ a {
 
 /*********** Populaires ***********/
 .populaires {
+    background-color: var(--main-bg-color);
     width: 32%;
 }
 
@@ -401,8 +408,8 @@ footer ul {
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/************************************* Media queries **********************************/
+/***************** Medium devices (tablets, less/equal than 1024px) *******************/
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
@@ -455,14 +462,155 @@ footer ul {
     }
 }
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+
+
+
+
+
+
+/********************** Small devices (phones, less than 768px) ***********************/
+@media (max-width: 768px) {
     .main-container {
         width: 100%;
         max-width: 768px;
-        padding: 0 20px;
+        padding: 0px;
         box-sizing: border-box;
     }
-    /*** Header ***/
+
+    body {
+        margin: 0px;
+    }
+    /******************* Header ********************/
+    header {
+        flex-direction: column;
+        border: solid var(--main-bg-color);
+        border-width: 0px 0px 2px 0px;
+    }
+
+    .menu-logo {
+        padding: 25px 50px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav a {
+        padding: 15px 0px;
+    }
+
+    .menu-navigation a:hover {
+        border-width: 0px 0px 3px 0px;
+    }
+
+    .menu-navigation {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    /******************* Formulaire ********************/
+    .formulaire {
+        padding: 0px 25px;
+    }
+
+    /*** Recherche ***/
+    .formulaire-recherche span {
+        display: none;
+    }
+
+    .formulaire-recherche .fa-magnifying-glass {
+        display: block;
+    }
+
+    .formulaire-recherche button {
+        border-radius: 15px;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.265);
+    }
+
+
+    /*** Filtres ***/
+    .formulaire-filtres {
+        font-weight: bold;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .filtres {
+        justify-content: space-between;
+
+    }
+
+    .bouton-filtre {
+        width: 48%;
+        margin: 10px 0px;
+    }
+
+    /********* Hébergements & Populaires ********/
+    .hebergements-and-populaires section {
+        border-radius: 0px;
+    }
+
+    /*** Hébergements ***/
+    .hebergements {
+        order: 2;
+        background-color: white;
+        margin-top: 25px;
+    }
+
+    .hebergements-cards a {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .hebergements-cards {
+        padding-top: 10px;
+    }
     
+    /*** Populaires ***/
+    .populaires {
+        order: 1;
+        background-color: var(--main-bg-color);
+        margin-top: 0px;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+
+    /******************* Activités *****************/
+    .activites-cards {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    
+    .activites-cards a {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .activites section {
+        width: 100%;
+    }
+
+
+    /******************* Footer ********************/
+
+    .footer-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 30px;
+    }
+
 }
